@@ -1,0 +1,2 @@
+part: 'pq-gcc',    branch: '4.9.1'
+part: 'pq-perl',   branch: '5.20.1'
