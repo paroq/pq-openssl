@@ -1,10 +1,11 @@
 include $(PQ_FACTORY)/factory.mk
 
-pq_part_name := openssl-1.0.2
+pq_part_name := openssl-1.0.2d
 pq_part_file := $(pq_part_name).tar.gz
 
 pq_openssl_configuration_flags += --prefix=$(part_dir)
 pq_openssl_configuration_flags += shared threads
+pq_openssl_configuration_flags += zlib-dynamic
 
 build-stamp: stage-stamp
 	$(MAKE) -j1 -C $(pq_part_name) mkinstalldirs=$(part_dir)
